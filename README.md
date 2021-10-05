@@ -26,3 +26,5 @@ The data structure for a contact is as follows:
     "createdAt": 1633463730
 }
 ```
+
+Bonus: Add features such as pulldown to refresh, etc. have fun with it!

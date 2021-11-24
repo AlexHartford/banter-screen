@@ -38,6 +38,7 @@ class ContactListVC: UIViewController {
         self.imgNotify.isUserInteractionEnabled = true
         contactListView.delegate = self
         contactListView.dataSource = self
+        // Here is the 
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
         contactListView.refreshControl = refreshControl
     }
@@ -53,7 +54,10 @@ class ContactListVC: UIViewController {
     @objc func tap_NewConversation() {
         let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "detailVC") as! DetailVC
         detailVC.pageTitle = "New Conversation"
-        self.navigationController?.pushViewController(detailVC, animated: true)
+        //
+//        self.navigationController?.pushViewController(detailVC, animated: true)
+        
+        self.present(detailVC, animated: true, completion: nil)
     }
     
     @objc func tap_Notify() {
